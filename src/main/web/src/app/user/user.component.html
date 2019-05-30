@@ -1,0 +1,69 @@
+<div class="container">
+  <mat-tab-group [(selectedIndex)]="indexOfTabToOpen">
+    <mat-tab label="Summary">
+      <div class="tabBorderPadding">
+        <app-user-summary></app-user-summary>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_USER'" label="Subscriptions">
+      <div class="tabBorderPadding">
+        <app-user-subscriptions></app-user-subscriptions>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_ADMIN'" label="Users">
+      <div class="tabBorderPadding">
+        <app-table></app-table>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_ADMIN'" label="Bundles">
+      <div class="tabBorderPadding">
+        <app-user-bundles></app-user-bundles>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_PROVIDER' || authority == 'ROLE_APPROVER'" label="Trips">
+      <div class="tabBorderPadding">
+        <app-user-trips></app-user-trips>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_ADMIN'" label="Reports">
+      <div class="tabBorderPadding">
+        <app-report></app-report>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_ADMIN'" label="Dashboards">
+      <div class="tabBorderPadding">
+        <app-admin-dashboard></app-admin-dashboard>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_PROVIDER'" label="Dashboards">
+      <div class="tabBorderPadding">
+        <app-carrier-dashboard></app-carrier-dashboard>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_APPROVER'" label="Dashboards">
+      <div class="tabBorderPadding">
+        <app-approver-dashboard></app-approver-dashboard>
+      </div>
+    </mat-tab>
+    <mat-tab *ngIf="authority == 'ROLE_APPROVER' || authority == 'ROLE_USER'"
+             label="Trouble tickets">
+      <div class="tabBorderPadding">
+        <app-user-trouble-tickets></app-user-trouble-tickets>
+      </div>
+    </mat-tab>
+    <!--<mat-tab label="Chat" *ngIf="authority == 'ROLE_APPROVER'">
+      <app-chat></app-chat>
+    </mat-tab>-->
+    <!--<mat-tab *ngIf="authority == 'ROLE_USER'" label="Support chat">-->
+    <!--<app-support-chat></app-support-chat>-->
+    <!--</mat-tab>-->
+    <!--<mat-tab *ngIf="authority == 'ROLE_APPROVER'" label="Support chats">-->
+    <!--<app-approvers-chat></app-approvers-chat>-->
+    <!--</mat-tab>-->
+    <mat-tab label="My Orders" *ngIf="authority == 'ROLE_USER'">
+      <div class="tabBorderPadding">
+        <app-user-orders></app-user-orders>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

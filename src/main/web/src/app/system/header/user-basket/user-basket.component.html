@@ -1,0 +1,57 @@
+<li>
+  <div aria-expanded="false" aria-haspopup="true" class="btn-group">
+    <button (click)="rerender()"
+            class="notify-btn"
+            data-target="#modalBasket"
+            data-toggle="modal"
+            mat-mini-fab>
+      <mat-icon class="white-icon"
+                matBadge="{{getLenght() == 0 ? null : getLenght()}}"
+                matBadgePosition="above after">
+        shopping_cart
+      </mat-icon>
+    </button>
+  </div>
+</li>
+
+<!--Modal: modalNotifications-->
+<div class="modal fade top"
+     id="modalBasket"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="basketLabel"
+     aria-hidden="true"
+     data-backdrop="true">
+  <div class="modal-dialog modal-lg modal-side modal-top-right modal-notify modal-info modal-notification"
+       role="document">
+    <div class="modal-content">
+
+      <div class="modal-header header-layout">
+        <p class="heading">Shopping cart</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body overflow overflow-auto">
+
+        <div>
+          <ng-container #outlet>
+          </ng-container>
+        </div>
+
+        <ng-template #content>
+          <child></child>
+        </ng-template>
+        <div class="row btn-panel">
+          <div class="col-12">
+            <button type="button" routerLink="/checkout" class="btn btn-info btn-md btn-not">
+              Proceed to checkout
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

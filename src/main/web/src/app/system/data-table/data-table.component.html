@@ -1,0 +1,71 @@
+<div class="container table-container">
+  <!--<h2>{{tableName}}</h2>-->
+
+  <div>
+    <mat-form-field>
+      <input (keyup)="doFilter($event.target.value)" matInput placeholder="Search" type="text">
+    </mat-form-field>
+  </div>
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container *ngFor="let columnName of propertyNames; index as i" [matColumnDef]="columnName">
+      <mat-header-cell *matHeaderCellDef class="col-name-layout" mat-sort-header>
+        {{columnName | toTitle}}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element[columnName] | formatCell: settings[i]}}</mat-cell>
+    </ng-container>
+
+
+    <!-- edit column -->
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef class="edit-col-layout"></mat-header-cell>
+      <mat-cell *matCellDef="let element">
+          <div *ngIf="!url">
+            <button (click)="info(element.id)" class="btn-edit" mat-icon-button>
+              <img src="../../../assets/images/more.png" alt="detailedInfoImg">
+            </button>
+          </div>
+        <div *ngIf="url">
+          <a routerLink="{{url}}{{element.id}}">
+            <img src="../../../assets/images/more.png" alt="detailedInfoImg">
+          </a>
+        </div>
+        <button (click)="record = element" data-target="#deleteModal" data-toggle="modal" mat-icon-button *ngIf="flagOfDeletingButtons">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+  </mat-table>
+  <mat-paginator [length]="dataSource.data.length"
+                 [pageIndex]="0"
+                 [pageSizeOptions]="[1, 2, 10, 25, 50]"
+                 [pageSize]="10"
+                 showFirstLastButtons>
+  </mat-paginator>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete this record?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary styledButton" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary redButton" data-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
