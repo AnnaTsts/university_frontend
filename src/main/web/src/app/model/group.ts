@@ -1,4 +1,7 @@
-import {Faculty, Specialization, User} from './author.model';
+import {Specialization} from "@models/specialization";
+import {User} from "@models/user";
+import {Faculty} from "@models/faculty";
+
 
 export interface Group {
   Id: number ;

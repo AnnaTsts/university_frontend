@@ -1,4 +1,6 @@
-import {TeacherSubject, User} from './author.model';
+import {User} from "@models/user";
+import {TeacherSubject} from "@models/teacher-subject";
+
 
 export interface StudentMark {
   Id: number;

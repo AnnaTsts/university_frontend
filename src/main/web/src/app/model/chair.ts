@@ -1,4 +1,3 @@
-//import {Faculty} from './author.model';
 
 import {Faculty} from './faculty';
 
