@@ -1,0 +1,61 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      <div align="center">
+
+        <img alt="User Pic" src="{{user?.details.imageSrc}}?s=196&d=mp"
+             class="img-responsive userpic" id="profile-image1">
+        <div>
+          <button (click)="editUser()" *ngIf="editable" class="btn btn1 styledButton" color="primary" mdbBtn
+                  mdbWavesEffect style="width: 196px">Edit profile
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-8">
+      <table borderless="true" mdbTable>
+        <tr class="head">Account details</tr>
+        <tbody>
+        <tr>
+          <td>
+              <mdb-icon fas icon="user"></mdb-icon>
+              Username:
+          </td>
+          <td>{{user?.username}}</td>
+        </tr>
+        <tr>
+          <td>
+            <mdb-icon far icon="id-card"></mdb-icon>
+            First name:
+          </td>
+          <td>{{user?.details.firstName}}</td>
+        </tr>
+        <tr>
+          <td>
+            <mdb-icon fas icon="id-card"></mdb-icon>
+            Last name:
+          </td>
+          <td>{{user?.details.lastName}}</td>
+        </tr>
+        <tr>
+          <td>
+            <mdb-icon fas icon="envelope"></mdb-icon>
+            E-mail:
+          </td>
+          <td>{{user?.email}}</td>
+        </tr>
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<mdb-icon fas icon="map-marked-alt"></mdb-icon>-->
+        <!--Address:-->
+        <!--</td>-->
+        <!--<td>{{user?.details.locationId}}</td>-->
+        <!--</tr>-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import {title} from "@environments/environment";
-//import {StompClientService} from "@services/stomp-client.service";
-//import {AuthService} from "@services/auth.service";
-//import {LoadingService} from "@services/loading.service";
-import {Subscription} from "rxjs";
+import {Title} from '@angular/platform-browser';
+import {title} from '@environments/environment';
+// import {StompClientService} from "@services/stomp-client.service";
+// import {AuthService} from "@services/auth.service";
+// import {LoadingService} from "@services/loading.service";
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +12,10 @@ import {Subscription} from "rxjs";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  loading: boolean = false;
+  loading = false;
 
 
-  public constructor(private titleService: Title,) {
+  public constructor(private titleService: Title, ) {
     this.setTitle(title);
 
   }

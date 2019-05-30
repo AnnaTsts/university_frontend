@@ -8,9 +8,9 @@ export class ToTitlePipe implements PipeTransform {
     if (value === undefined) {
       return 'not available';
     }
-    let defaultTitlePipe = new TitleCasePipe();
-    if (value == 'authorityId') {
-      return 'Authority'
+    const defaultTitlePipe = new TitleCasePipe();
+    if (value === 'authorityId') {
+      return 'Authority';
     } else {
       return defaultTitlePipe.transform(value.replace(/([^A-Z])([A-Z])/g, '$1 $2'));
     }

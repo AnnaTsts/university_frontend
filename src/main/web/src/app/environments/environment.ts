@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   ws: 'http://localhost:8080/socket'
   // ws: '/socket'
 };
@@ -82,6 +82,7 @@ export const GET_ALL_TRIP_RELATED_DISCOUNTS_BY_TRIP_ID = BASE_URL + 'api/discoun
 
 export const VIEW_CONTROLLER = BASE_URL + 'api/views';
 export const COUNT_VIEWS_BY_TRIP_ID = VIEW_CONTROLLER + '/trip/';
+export const COUNT_VIEWS_BY_BUNDLE_ID =  VIEW_CONTROLLER + '/bundle/';
 
 export const GET_SERVICES_BY_PROVIDER_ID = BASE_URL + 'api/account/services/provider';
 
@@ -112,5 +113,7 @@ export const GRAVATAR_BASE_URL = 'https://www.gravatar.com/avatar/';
 
 export const GOOGLE_DRIVE_PICTURE_BASE_URL = 'https://drive.google.com/uc?id=';
 export const GOOGLE_DRIVE_OAUTH2_REFRESH_TOKEN_URL = 'https://www.googleapis.com/oauth2/v4/token';
+
+export const GET_SERVICE_BY_ID = BASE_URL + 'api/account/services/';
 
 // export const CVET_YAIZ_DROZDA = "#1fcecb";

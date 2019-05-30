@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {User} from "@models/user";
-import {HttpClient} from "@angular/common/http";
-import {UsersService} from "@services/users.service";
+import {User} from '@models/user';
+import {HttpClient} from '@angular/common/http';
+import {UsersService} from '@services/users.service';
 
 @Component({
   selector: 'app-user-summary',

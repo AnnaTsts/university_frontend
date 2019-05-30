@@ -1,12 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {UsersService} from "@services/users.service";
-import {User} from "@models/user";
-import {ActivatedRoute, Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
-import {ShareDataService} from "@services/share-data.service";
-import {MatSnackBar} from "@angular/material";
-import {SnackbarComponent} from "@models/snackbar/snackbar.component";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UsersService} from '@services/users.service';
+import {User} from '@models/user';
+import {ActivatedRoute, Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {ShareDataService} from '@services/share-data.service';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-edit-profile',
@@ -22,7 +21,7 @@ export class EditProfileComponent implements OnInit {
   user: User;
   private newUser: User;
 
-  isDisabled: boolean = false;
+  isDisabled = false;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -38,7 +37,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUserSummaryById(<number><unknown>this.route.snapshot.paramMap.get("id")).subscribe(
+    this.userService.getUserSummaryById(this.route.snapshot.paramMap.get('id') as unknown as number).subscribe(
       data => {
         this.user = data;
         this.newUser = data;
@@ -82,17 +81,17 @@ export class EditProfileComponent implements OnInit {
       return;
     }
 
-    return this.userService.updateSummary(this.newUser).subscribe(() => {
-      this.router.navigate(['user/' + this.user.id]);
-      this.openSnackBar("User summary updated");
-      this.isDisabled = false;
-    });
+    // return this.userService.updateSummary(this.newUser).subscribe(() => {
+    //   this.router.navigate(['user/' + this.user.id]);
+    //   this.openSnackBar('User summary updated');
+    //   this.isDisabled = false;
+    // });
   }
 
-  openSnackBar(message: string) {
-    this.shareDataService.snackBarMessage = message;
-    this.snackBar.openFromComponent(SnackbarComponent, {
-      duration: 1000
-    })
-  }
+  // openSnackBar(message: string) {
+  //   this.shareDataService.snackBarMessage = message;
+  //   this.snackBar.openFromComponent(SnackbarComponent, {
+  //     duration: 1000
+  //   });
+  // }
 }

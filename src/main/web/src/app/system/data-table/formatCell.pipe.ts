@@ -1,9 +1,7 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {CurrencyPipe, DatePipe} from "@angular/common";
-import {TableSettings} from "@models/table-settings.model";
-import {Trip} from "@models/trip";
-import {City} from "@models/city";
-import {AuthorityPipe} from "./authority.pipe";
+import {CurrencyPipe, DatePipe} from '@angular/common';
+import {TableSettings} from '@models/table-settings.model';
+import {AuthorityPipe} from './authority.pipe';
 
 @Pipe({name: 'formatCell'})
 export class FormatCellPipe implements PipeTransform {
@@ -31,21 +29,16 @@ export class FormatCellPipe implements PipeTransform {
       return this.currencyPipe.transform(value);
     }
 
-    if (formatting.type === 'location') {
-      return (<City>value).name;
-    }
-
-    if (formatting.type === 'discountServiceName') {
-      return (new Trip(value)).name;
-    }
-
     if (formatting.type === 'authority') {
       return this.authorityPipe.transform(value);
     }
 
     if (formatting.type === 'status') {
-      if (value.toString() === "true") return "Yes";
-      else return "No";
+      if (value.toString() === 'true') {
+        return 'Yes';
+      } else {
+        return 'No';
+      }
     }
 
     return value;

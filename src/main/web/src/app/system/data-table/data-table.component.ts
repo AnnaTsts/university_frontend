@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {TableSettings} from "@models/table-settings.model";
+import {TableSettings} from '@models/table-settings.model';
 
 @Component({
   selector: 'data-table',
@@ -42,7 +42,7 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
     if (this.editable) {
       this.columnsToDisplay = this.propertyNames.concat('edit');
-      if (this.deleting == true) {
+      if (this.deleting === true) {
         this.flagOfDeletingButtons = true;
       }
     }
@@ -55,14 +55,14 @@ export class DataTableComponent implements OnInit, AfterViewInit {
 
   public doFilter = (value: string) => {
     this.dataSource.filter = value.trim().toLocaleLowerCase();
-  };
+  }
 
   public getProperty(columnName: string) {
     return this.settings.find(x => x.propertyName === columnName);
   }
 
   public info(id: number) {
-    this.infoEvent.emit(id)
+    this.infoEvent.emit(id);
   }
 
   public delete() {

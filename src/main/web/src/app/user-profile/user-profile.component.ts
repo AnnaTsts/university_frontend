@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {UsersService} from "../shared/users.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
-import {User} from "@models/user";
-import {AuthService} from "../shared/auth.service";
+import {UsersService} from '../shared/users.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {User} from '@models/user';
+import {AuthService} from '../shared/auth.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -23,9 +23,9 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usersService.getUserSummaryById(+this.aRoute.snapshot.paramMap.get("id")).subscribe(data => {
+    this.usersService.getUserSummaryById(+this.aRoute.snapshot.paramMap.get('id')).subscribe(data => {
       this.user = data;
-      this.editable = (this.user.authority == "ROLE_PROVIDER" || this.user.authority == "ROLE_APPROVER") && this.authService.getDecodedToken().authority == "ROLE_ADMIN";
+      this.editable = (this.user.authority === 'ROLE_PROVIDER' || this.user.authority === 'ROLE_APPROVER') && this.authService.getDecodedToken().authority === 'ROLE_ADMIN';
     }, err => {
       alert(err);
     });

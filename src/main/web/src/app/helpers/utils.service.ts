@@ -1,6 +1,6 @@
 import {ElementRef, Injectable} from '@angular/core';
-import {Md5} from "ts-md5";
-import {GRAVATAR_BASE_URL} from "@environments/environment";
+import {Md5} from 'ts-md5';
+import {GRAVATAR_BASE_URL} from '@environments/environment';
 
 @Injectable({
   providedIn: 'root'

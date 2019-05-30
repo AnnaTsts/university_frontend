@@ -1,5 +1,5 @@
-import {Injectable, OnInit} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {Injectable, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import {
   CHANGE_PASSWORD_SUMMARY,
   DELETE_USER_BY_ID,
@@ -7,8 +7,8 @@ import {
   GET_ALL_USERS,
   GET_CURRENT_USER,
   GET_USER_BY_ID
-} from "@environments/environment";
-import {User} from "@models/user";
+} from '@environments/environment';
+import {User} from '@models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class UsersService implements OnInit {
 
   getAllUsers() {
     return this.http.get<User[]>(`${GET_ALL_USERS}`);
-  };
+  }
 
   deleteUserById(id: number) {
     return this.http.delete(`${DELETE_USER_BY_ID}` + id);
@@ -44,7 +44,7 @@ export class UsersService implements OnInit {
   }
 
   changePassword(user: User, oldPassword) {
-    return this.http.put<any>(`${CHANGE_PASSWORD_SUMMARY}`, {"user": user, "oldPassword": oldPassword});
+    return this.http.put<any>(`${CHANGE_PASSWORD_SUMMARY}`, {user, oldPassword});
   }
 
   getCurrentUser() {
