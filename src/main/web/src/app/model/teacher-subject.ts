@@ -1,3 +1,6 @@
+import {Group} from "@models/group";
+import {Subject} from "@models/subject";
+import {User} from "@models/user";
 
 export interface TeacherSubject {
   Id: number ;
@@ -8,9 +11,7 @@ export interface TeacherSubject {
 
   GroupId: number ;
 
-  StartTime: number ;
-
-  EndTime: number ;
+  Semester: number ;
 
   Teacher: User;
 
