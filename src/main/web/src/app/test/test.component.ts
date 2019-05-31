@@ -13,20 +13,18 @@ export class TestComponent implements OnInit {
 
   personalDetails = [
     {
-      fname: 'Muhammed',
-      lname: 'Shanid',
-      email: 'shanid@shanid.com'
+      name: 'Muhammed Shanid',
+      marks: [1, 2, 3, 4, 5]
     },
     {
-      fname: 'John',
-      lname: 'Abraham',
-      email: 'john@john.com'
+      name: 'John Abraham',
+      marks: [1, 2, 3, 4, 5]
     },
     {
-      fname: 'Roy',
-      lname: 'Mathew',
-      email: 'roy@roy.com'
-    }];
+      name: 'Roy Mathew',
+      marks: [1, 2, 3, 4, 5]
+    }
+  ];
 
   ngOnInit() {
   }

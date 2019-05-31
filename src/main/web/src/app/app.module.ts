@@ -26,7 +26,14 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {EditProfileComponent} from './user-profile/edit-profile/edit-profile.component';
 import {AgmCoreModule} from '@agm/core';
 import {NgSelectModule} from '@ng-select/ng-select';
-import {MatButtonModule, MatFormFieldModule, MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatFormFieldModule, MatInputModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTabsModule
+} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -73,7 +80,9 @@ import { TestComponent } from './test/test.component';
     }),
     NgbModule,
     NgSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule
 
 
   ],
