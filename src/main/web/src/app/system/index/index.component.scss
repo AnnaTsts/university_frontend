@@ -7,9 +7,22 @@
   border-radius: 10px;
 }
 
-#bundleSlider {
-  padding-bottom: 46.25%;
+.d-block w-100{
+  max-height: 450px;
 }
+
+#im1{
+  max-height: 450px;
+}
+
+#im2{
+  max-height: 450px;
+}
+#im3{
+  max-height: 450px;
+}
+
+
 
 .tripCard {
   max-width: 400px;
@@ -29,7 +42,7 @@ body {
 }
 
 
-.carousel slide carousel-fade {
+.carousel slide carousel-item {
   max-height: 500px;
 }
 

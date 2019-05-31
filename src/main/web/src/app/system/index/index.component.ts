@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from '@services/auth.service';
-import {Router} from '@angular/router';
+
 
 
 @Component({
@@ -13,26 +12,10 @@ import {Router} from '@angular/router';
 export class IndexComponent implements OnInit {
 
 
-  loading = false;
-
-  constructor(private authService: AuthService,
-              private router: Router) {
-  }
-
-  get authorized() {
-    return this.authService.getDecodedToken() != null;
-  }
-
-
-
-
-  intoTripPage(id) {
-    this.router.navigate(['trip/' + id]);
-  }
-
 
   ngOnInit() {
    window.scrollTo(0, 0);
+   console.log("Im alive");
   }
 
 }

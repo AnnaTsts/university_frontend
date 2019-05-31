@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
-
+import {IndexComponent} from "./system/index/index.component";
 import {UserComponent} from './user/user.component';
 
 
@@ -10,6 +10,7 @@ const appRoutes: Routes = [
     component: UserComponent,
 
   },
+  {path: '', component: IndexComponent},
   {path: '**', redirectTo: ''},
 ];
 
