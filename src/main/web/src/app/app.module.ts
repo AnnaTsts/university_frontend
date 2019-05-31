@@ -33,8 +33,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
 
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+
 @NgModule({
   declarations: [
+    SignInComponent,
+    SignUpComponent,
     HeaderComponent,
     AppComponent,
     IndexComponent,

@@ -1,13 +1,14 @@
 import {UserDetails} from './user.details';
 
 export interface User {
-  id: number;
-  authorityId: number;
+  id?: number;
+  authorityId?: number;
   email: string;
   username: string;
   password: string;
-  authority: string;
-  details? : UserDetails;
+  ConfirmPassword?: string ;
+  authority?: string;
+  details?: UserDetails;
   token?: string;
 
   // firstName?: string;
