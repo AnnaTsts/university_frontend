@@ -26,12 +26,14 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {EditProfileComponent} from './user-profile/edit-profile/edit-profile.component';
 import {AgmCoreModule} from '@agm/core';
 import {NgSelectModule} from '@ng-select/ng-select';
-import {MatFormFieldModule, MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
+import { TableComponent } from './table/table.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import {AuthorityPipe} from './system/data-table/authority.pipe';
     EditProfileComponent,
     EditProfileComponent,
     AuthorityPipe,
+    TableComponent,
+    TestComponent,
 
   ],
   imports: [
@@ -68,7 +72,8 @@ import {AuthorityPipe} from './system/data-table/authority.pipe';
       apiKey: 'AIzaSyAcaaElwdGQIGIRnr2Ay1Hl9BuqEwDpjeY'
     }),
     NgbModule,
-    NgSelectModule
+    NgSelectModule,
+    MatButtonModule
 
 
   ],
