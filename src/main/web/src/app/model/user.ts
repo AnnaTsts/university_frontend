@@ -7,7 +7,7 @@ export interface User {
   username: string;
   password: string;
   authority: string;
-  details? : UserDetails;
+  details?: UserDetails;
   token?: string;
 
   // firstName?: string;

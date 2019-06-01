@@ -1,21 +1,21 @@
-import {Group} from "@models/group";
-import {Subject} from "@models/subject";
-import {User} from "@models/user";
+import {Group} from '@models/group';
+import {Subject} from '@models/subject';
+import {User} from '@models/user';
 
 export interface TeacherSubject {
-  Id: number ;
+  Id: number;
 
-  TeacherId: string ;
+  TeacherId: string;
 
-  SubjectId: number ;
+  SubjectId: number;
 
-  GroupId: number ;
+  GroupId: number;
 
-  Semester: number ;
+  Semester: number;
 
   Teacher: User;
 
-  Group: Group ;
+  Group: Group;
 
   Subject: Subject;
 }

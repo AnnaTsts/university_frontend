@@ -2,19 +2,17 @@
   margin-right: 10px;
 }
 
-
-.table-container2 {
+.background-layout {
   background-color: white;
   border-radius: 5px;
-  padding: 10px;
+  padding-top: 10px;
+}
 
+.table-container2 {
+  padding: 10px 0 10px 0;
   width: available;
   overflow-x: scroll;
 
-}
-
-tbody > tr {
-  padding: 2.5px;
 }
 
 .fixed {
@@ -22,15 +20,8 @@ tbody > tr {
   width: 150px !important;
 }
 
-.fixed-column {
-
-  border-radius: 5px;
-  padding: 5px;
-}
-
-
-tr td:first-child {
-  min-width: 180px;
+tr td:nth-child(2) {
+  padding-left: 160px;
 }
 
 table {
@@ -38,9 +29,7 @@ table {
 }
 
 .mark-layout {
-  padding: 0.375rem 0.7rem;
-  width: 50px;
-
+  width: 100px ;
 }
 
 .mark-cell {
@@ -55,3 +44,15 @@ table {
   background-color: white;
 }
 
+label {
+  margin-bottom: 0;
+}
+
+.top-centered-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}

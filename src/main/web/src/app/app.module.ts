@@ -39,7 +39,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
-import { TableComponent } from './table/table.component';
+import { StudentTableComponent } from './student-table/student-table.component';
 import { TestComponent } from './test/test.component';
 
 @NgModule({
@@ -56,7 +56,7 @@ import { TestComponent } from './test/test.component';
     EditProfileComponent,
     EditProfileComponent,
     AuthorityPipe,
-    TableComponent,
+    StudentTableComponent,
     TestComponent,
 
   ],

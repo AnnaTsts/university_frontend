@@ -1,6 +1,6 @@
-import {Specialization} from "@models/specialization";
-import {User} from "@models/user";
-import {Faculty} from "@models/faculty";
+import {Specialization} from '@models/specialization';
+import {User} from '@models/user';
+import {Faculty} from '@models/faculty';
 
 
 export interface Group {
