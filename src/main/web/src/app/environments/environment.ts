@@ -20,6 +20,10 @@ export const GET_ALL_USERS = BASE_URL + 'api/account/users';
 export const GET_CURRENT_USER = BASE_URL + 'api/account/summary';
 export const GET_USER_BY_ID = BASE_URL + 'api/account/summary/';
 
+export const GET_CURR_USER_SUMM = BASE_URL + 'api/Summary';
+
+
+
 export const DELETE_USER_BY_ID = BASE_URL + 'api/account/users';
 
 export const EDIT_SUMMARY = BASE_URL + 'api/account/summary/edit';
@@ -28,7 +32,7 @@ export const CHANGE_PASSWORD_SUMMARY = BASE_URL + 'api/account/summary/changePas
 export const GET_ALL_CHAIR = BASE_URL + 'api/Chair';
 export const GET_ALL_GROUP = BASE_URL + 'api/Group';
 
-export const GET_ALL_SUBJECT = BASE_URL + 'api/TeacherSubject';
+export const GET_ALL_SUBJECT = BASE_URL + 'api/Subject/All';
 export const GET_ALL_SUBJECT_BY_TEACHER = BASE_URL + 'api/TeacherSubject/teacher';
 
 

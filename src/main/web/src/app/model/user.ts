@@ -28,3 +28,18 @@ export interface User2 {
   Chair: Chair;
   GroupId: number;
 }
+
+export interface User3 {
+  Id: string;
+  UserName: string;
+  Email: string;
+  Password?: string;
+  ChairId: number;
+  ChairName: string;
+  GroupId: number;
+  GroupName: string;
+  FacultyName: string;
+  SpecializationName: string;
+  FirstName: string;
+  SecondName: string;
+}

@@ -1,0 +1,51 @@
+<div class="container container-layout">
+<div class="col-md-8">
+
+  <mat-card class="filter">
+    <div class="row">
+<mat-card-header>
+      <mat-card-title>Get new subject in some group</mat-card-title>
+</mat-card-header>
+    </div>
+
+
+      <div class="col-md-5">
+
+          <ng-select [items]=groups
+           bindLabel="Name"
+           placeholder="Select group"
+           [(ngModel)]="selectedGroup">
+            </ng-select>
+      </div>
+  <br>
+      <div class="col-md-5">
+            <ng-select [items]=subjects
+           bindLabel="Name"
+           placeholder="Select subject"
+           [(ngModel)]="selectedSubject">
+            </ng-select>
+      </div>
+    <br>
+
+    <div class="col-md-5">
+    <label >Minimum price</label>
+    <input type="number"
+           min="1"
+           max=10
+           [(ngModel)]="selectedSemester"
+           />
+    </div>
+
+
+    <div>
+      <button class="btn btn-wide styledButton" color="primary" mdbBtn mdbWavesEffect (click)=add()>
+        Add
+        <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
+      </button>
+    </div>
+
+
+  </mat-card>
+</div>
+</div>
+

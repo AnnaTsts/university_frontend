@@ -2,7 +2,7 @@
   <div class="row ">
     <div class="col-md-3">
       <div align="center">
-        <img alt="User Pic" src="{{currentUser?.details.imageSrc}}?s=196&d=mp"
+        <img alt="User Pic" src="https://www.french-weekendbreaks.co.uk/sites/uk.picardiev3/themes/picardiev3/img_v2/user-default.jpg"
              class="img-responsive userpic" id="profile-image1">
         <div>
           <button (click)="editUser()" class="btn btn1 styledButton" color="primary" mdbBtn mdbWavesEffect
@@ -25,7 +25,7 @@
               Username:
             </h5>
           </td>
-          <td>{{currentUser?.username}}</td>
+          <td>{{currentUser?.UserName}}</td>
         </tr>
         <tr mdbTableCol>
           <td>
@@ -34,7 +34,7 @@
               First name:
             </h5>
           </td>
-          <td>{{currentUser?.details.firstName}}</td>
+          <td>{{currentUser?.FirstName}}</td>
         </tr>
         <tr mdbTableCol>
           <td>
@@ -43,7 +43,7 @@
               Last name:
             </h5>
           </td>
-          <td>{{currentUser?.details.lastName}}</td>
+          <td>{{currentUser?.SecondName}}</td>
         </tr>
         <tr mdbTableCol>
           <td>
@@ -52,7 +52,16 @@
               E-mail:
             </h5>
           </td>
-          <td>{{currentUser?.email}}</td>
+          <td>{{currentUser?.Email}}</td>
+        </tr>
+        <tr mdbTableCol>
+          <td>
+            <h5>
+              <mdb-icon fas icon="user-graduate"></mdb-icon>
+              Faculty :
+            </h5>
+          </td>
+          <td>{{currentUser?.FacultyName}}</td>
         </tr>
         </tbody>
       </table>

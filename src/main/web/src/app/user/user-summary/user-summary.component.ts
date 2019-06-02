@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {User} from '@models/user';
+import {User, User2, User3} from '@models/user';
 import {HttpClient} from '@angular/common/http';
 import {UsersService} from '@services/users.service';
 
@@ -10,7 +10,7 @@ import {UsersService} from '@services/users.service';
   styleUrls: ['./user-summary.component.scss']
 })
 export class UserSummaryComponent implements OnInit {
-  public currentUser: User;
+  public currentUser: User3;
 
   constructor(private router: Router,
               private http: HttpClient,

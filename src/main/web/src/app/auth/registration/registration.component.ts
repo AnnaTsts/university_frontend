@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from '../../service/auth.service';
 import {Router} from "@angular/router";
 import {MustMatch} from "@helpers/must-mutch.validator";
+import {ChairService} from "@services/chair.service";
+import {GroupService} from "@services/group.service";
 
 @Component({
   selector: 'app-registration',
@@ -14,16 +16,21 @@ export class RegistrationComponent implements OnInit {
   submitted = false;
   error = '';
   loading = false;
+  selectedVal: string = '';
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private chairServise: ChairService ,
+              private groupService: GroupService) {
   }
 
   ngOnInit() {
     if (this.authService.isSignedIn) {
     // if (this.authService.currentUserValue) {
       this.router.navigate(['']);
+
+
     }
     this.registrationForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(64)]],
@@ -31,7 +38,8 @@ export class RegistrationComponent implements OnInit {
       lastName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(40)]],
       email: ['', [Validators.required, Validators.email, Validators.maxLength(128)]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(128)]],
-      passwordConfirm: ['', [Validators.required]]
+      passwordConfirm: ['', [Validators.required]],
+      role: ['']
     }, {
       validator: MustMatch('password', 'passwordConfirm')
     });
@@ -59,7 +67,7 @@ export class RegistrationComponent implements OnInit {
       "email": this.registrationForm.controls.email.value.trim(),
       "password": this.registrationForm.controls.password.value,
       "confirmpassword": this.registrationForm.controls.password.value,
-      "role": "ROLE_USER"
+      "role": "ROLE_" + this.f.role.value
     };
 
 
@@ -77,5 +85,13 @@ export class RegistrationComponent implements OnInit {
       }
     );
   }
+
+  selectChangeHandler(event: any) {
+    this.selectedVal = event.target.value;
+  }
+
+
+
+
 }
 
