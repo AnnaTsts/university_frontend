@@ -1,21 +1,21 @@
-import {User} from "@models/user";
-import {TeacherSubject} from "@models/teacher-subject";
+import {User, User2} from '@models/user';
+import {TeacherSubject} from '@models/teacher-subject';
 
 
 export interface StudentMark {
   Id: number;
 
-  ApplicationUserId: string ;
+  ApplicationUserId: string;
 
-  Student: User ;
+  Student: User2;
 
-  TeacherSubjectId: number ;
+  TeacherSubjectId: number;
 
-  TeacherSubject: TeacherSubject ;
+  TeacherSubject: TeacherSubject;
 
-  Mark: number ;
+  Mark: number;
 
-  NameOfWork: string ;
+  NameOfWork?: string;
 
-  DateTime: number ;
+  DateTime: Date;
 }

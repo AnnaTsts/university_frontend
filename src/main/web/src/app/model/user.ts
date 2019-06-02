@@ -1,4 +1,5 @@
 import {UserDetails} from './user.details';
+import {Chair} from '@models/chair';
 
 export interface User {
   id: number;
@@ -17,3 +18,13 @@ export interface User {
 }
 
 
+
+export interface User2 {
+  Id: string;
+  UserName: string;
+  Email: string;
+  Password?: string;
+  ChairId: number;
+  Chair: Chair;
+  GroupId: number;
+}

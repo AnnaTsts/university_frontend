@@ -1,0 +1,66 @@
+.btn-primary {
+  margin-right: 10px;
+}
+
+.background-layout {
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.table-container2 {
+  padding: 10px 0 10px 0;
+  width: available;
+  overflow-x: scroll;
+
+}
+
+.fixed {
+  position: absolute;
+  width: 150px !important;
+}
+
+tr td:nth-child(2) {
+
+  padding-left: 160px;
+}
+
+tr td:not(:first-child) {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+.mark-layout {
+  width: 100px ;
+}
+
+.mark-cell {
+  vertical-align: middle;
+}
+
+.grey-background {
+  background-color: #F2F2F2;
+}
+
+.white-background {
+  background-color: white;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.top-centered-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}

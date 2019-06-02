@@ -26,12 +26,22 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {EditProfileComponent} from './user-profile/edit-profile/edit-profile.component';
 import {AgmCoreModule} from '@agm/core';
 import {NgSelectModule} from '@ng-select/ng-select';
-import {MatFormFieldModule, MatPaginatorModule, MatSortModule, MatTabsModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatFormFieldModule, MatInputModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTabsModule
+} from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
+import { StudentTableComponent } from './student-table/student-table.component';
+import { TeachersTableComponent } from './teachers-table/teachers-table.component';
+import { EmptyMarkFieldPipePipe } from './helpers/empty-mark-field-pipe.pipe';
 
 import {LoginComponent} from './auth/login/login.component';
 import {RegistrationComponent} from './auth/registration/registration.component';
@@ -58,6 +68,9 @@ import {JwtService} from './service/jwt.service';
     EditProfileComponent,
     EditProfileComponent,
     AuthorityPipe,
+    StudentTableComponent,
+    TeachersTableComponent,
+    EmptyMarkFieldPipePipe,
 
   ],
   imports: [
@@ -79,7 +92,10 @@ import {JwtService} from './service/jwt.service';
       apiKey: 'AIzaSyAcaaElwdGQIGIRnr2Ay1Hl9BuqEwDpjeY'
     }),
     NgbModule,
-    NgSelectModule
+    NgSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule
 
 
   ],
