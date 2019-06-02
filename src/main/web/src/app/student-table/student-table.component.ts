@@ -51,7 +51,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -94,7 +94,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -137,7 +137,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -180,7 +180,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -223,7 +223,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -266,7 +266,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -309,7 +309,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -352,7 +352,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -395,7 +395,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -438,7 +438,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
     {
       Id: 1,
@@ -481,7 +481,7 @@ export class StudentTableComponent implements OnInit {
       },
       Mark: 99,
       NameOfWork: ' KursachKursachKu',
-      DateTime: new Date('123456789'),
+      DateTime: new Date(),
     },
   ];
 
