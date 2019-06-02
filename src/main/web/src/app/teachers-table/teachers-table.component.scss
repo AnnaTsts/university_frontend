@@ -2,19 +2,18 @@
   margin-right: 10px;
 }
 
-
-.table-container2 {
+.background-layout {
   background-color: white;
   border-radius: 5px;
-  padding: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
 
+.table-container2 {
+  padding: 10px 0 10px 0;
   width: available;
   overflow-x: scroll;
 
-}
-
-tbody > tr {
-  padding: 2.5px;
 }
 
 .fixed {
@@ -22,25 +21,23 @@ tbody > tr {
   width: 150px !important;
 }
 
-.fixed-column {
+tr td:nth-child(2) {
 
-  border-radius: 5px;
-  padding: 5px;
+  padding-left: 160px;
 }
 
-
-tr td:first-child {
-  min-width: 180px;
+tr td:not(:first-child) {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+
 
 table {
   border-collapse: collapse;
 }
 
 .mark-layout {
-  padding: 0.375rem 0.7rem;
-  width: 50px;
-
+  width: 100px ;
 }
 
 .mark-cell {
@@ -55,3 +52,15 @@ table {
   background-color: white;
 }
 
+label {
+  margin-bottom: 0;
+}
+
+.top-centered-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import {User} from '@models/user';
+import {User, User2} from '@models/user';
 import {TeacherSubject} from '@models/teacher-subject';
 
 
@@ -7,7 +7,7 @@ export interface StudentMark {
 
   ApplicationUserId: string;
 
-  Student: User;
+  Student: User2;
 
   TeacherSubjectId: number;
 
@@ -15,7 +15,7 @@ export interface StudentMark {
 
   Mark: number;
 
-  NameOfWork: string;
+  NameOfWork?: string;
 
-  DateTime: number;
+  DateTime: Date;
 }

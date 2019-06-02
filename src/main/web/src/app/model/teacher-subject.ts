@@ -1,6 +1,6 @@
 import {Group} from '@models/group';
 import {Subject} from '@models/subject';
-import {User} from '@models/user';
+import {User, User2} from '@models/user';
 
 export interface TeacherSubject {
   Id: number;
@@ -13,7 +13,7 @@ export interface TeacherSubject {
 
   Semester: number;
 
-  Teacher: User;
+  Teacher: User2;
 
   Group: Group;
 

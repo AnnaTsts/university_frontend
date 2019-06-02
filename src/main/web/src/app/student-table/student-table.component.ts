@@ -14,12 +14,13 @@ export class StudentTableComponent implements OnInit {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -29,12 +30,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -48,19 +50,20 @@ export class StudentTableComponent implements OnInit {
         Subject: null,
       },
       Mark: 99,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -70,12 +73,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -88,20 +92,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -111,12 +116,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -129,20 +135,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -152,12 +159,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -170,20 +178,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -193,12 +202,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -211,20 +221,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -234,12 +245,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -252,20 +264,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -275,12 +288,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -293,20 +307,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -316,12 +331,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -334,20 +350,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -357,12 +374,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -375,20 +393,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -398,12 +417,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -416,20 +436,21 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
     {
       Id: 1,
       ApplicationUserId: 'id  -_-',
       Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
+        Id: '99',
+        UserName: 'student',
+        Email: 'email',
+        Password: 'password',
+        Chair: null,
+        ChairId: 456,
+        GroupId: 2
       },
       TeacherSubjectId: 228,
       TeacherSubject: {
@@ -439,12 +460,13 @@ export class StudentTableComponent implements OnInit {
         GroupId: 333,
         Semester: 6,
         Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
+          Id: '98',
+          UserName: 'student',
+          Email: 'email',
+          Password: 'password',
+          Chair: null,
+          ChairId: 456,
+          GroupId: 2
         },
         Group: {
           Id: 333,
@@ -457,625 +479,10 @@ export class StudentTableComponent implements OnInit {
         },
         Subject: null,
       },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
+      Mark: 99,
+      NameOfWork: ' KursachKursachKu',
+      DateTime: new Date('123456789'),
     },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    },
-    {
-      Id: 1,
-      ApplicationUserId: 'id  -_-',
-      Student: {
-        id: 99,
-        authority: 'Student',
-        authorityId: 2,
-        email: 'email',
-        password: 'password',
-        username: 'student'
-      },
-      TeacherSubjectId: 228,
-      TeacherSubject: {
-        Id: 777,
-        TeacherId: '999',
-        SubjectId: 666,
-        GroupId: 333,
-        Semester: 6,
-        Teacher: {
-          id: 88,
-          authority: 'Teacher',
-          authorityId: 1,
-          email: 'email',
-          password: 'password',
-          username: 'teacher'
-        },
-        Group: {
-          Id: 333,
-          Name: 'group',
-          SpecializationId: 123,
-          Specialization: null,
-          Students: null,
-          FacultyId: 456,
-          Faculty: null
-        },
-        Subject: null,
-      },
-      Mark: 77,
-      NameOfWork: 'Kursach',
-      DateTime: 123456789,
-    }
   ];
 
   ngOnInit() {

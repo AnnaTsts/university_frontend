@@ -1,4 +1,5 @@
 import {UserDetails} from './user.details';
+import {Chair} from '@models/chair';
 
 export interface User {
   id: number;
@@ -10,9 +11,26 @@ export interface User {
   details?: UserDetails;
   token?: string;
 
+  // Id: string;
+  // UserName: string;
+  // Email: string;
+  // Password?: string;
+  // ChairId: number;
+  // Chair: Chair;
+  // GroupId: number;
   // firstName?: string;
   // secondName?: string;
   // role?: string;
   // registrationDate?: string;
   // imgSrc?: string
+}
+
+export interface User2 {
+  Id: string;
+  UserName: string;
+  Email: string;
+  Password?: string;
+  ChairId: number;
+  Chair: Chair;
+  GroupId: number;
 }

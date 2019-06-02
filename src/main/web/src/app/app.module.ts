@@ -40,7 +40,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
 import { StudentTableComponent } from './student-table/student-table.component';
-import { TestComponent } from './test/test.component';
+import { TeachersTableComponent } from './teachers-table/teachers-table.component';
+import { EmptyMarkFieldPipePipe } from './helpers/empty-mark-field-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { TestComponent } from './test/test.component';
     EditProfileComponent,
     AuthorityPipe,
     StudentTableComponent,
-    TestComponent,
+    TeachersTableComponent,
+    EmptyMarkFieldPipePipe,
 
   ],
   imports: [
