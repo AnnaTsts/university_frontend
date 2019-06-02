@@ -1,0 +1,82 @@
+<div class="container-fluid " style="margin-top: 50px;">
+
+  <div class="row no-gutters">
+    <div class="offset-1"></div>
+    <div class="col-10 background-layout">
+
+      <div class="row no-gutters">
+        <h2 class="top-centered-text">Group</h2>
+      </div>
+
+      <div class="row no-gutters">
+        <h4 style="margin-left: auto; margin-right: 10px">Subject</h4>
+      </div>
+
+      <div class="table-container2">
+        <div class="row no-gutters">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table #table class="table table-striped table-bordered" style="padding: 2px;">
+                <thead style="border: transparent">
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="fixed grey-background bold">
+                    NameOfWork
+                  </td>
+                  <ng-container *ngFor="let mark of dataToWork[0]">
+                    <td class="mark-cell">
+                      <label>
+                        <input class="mark-cell form-control" [ngModel]="mark.NameOfWork | emptyMark"
+                               (ngModelChange)="mark.NameOfWork = $event">
+                      </label>
+                    </td>
+                  </ng-container>
+                </tr>
+
+                <tr>
+                  <td class="fixed white-background bold">
+                    DateTime
+                  </td>
+                  <ng-container *ngFor="let mark of dataToWork[0]">
+                    <td class="mark-cell">
+                      <label>
+                        <input type="date" class="mark-cell form-control" [ngModel]="mark.DateTime | date:'yyyy-MM-dd'"
+                               (ngModelChange)="mark.DateTime = $event">
+                      </label>
+                    </td>
+                  </ng-container>
+                </tr>
+
+
+                <ng-container *ngFor="let record of dataToWork; index as i">
+                  <tr>
+                    <td class="fixed grey-background bold"
+                        [ngClass]="{'grey-background': i % 2 === 0, 'white-background':  i % 2 !== 0}">
+                      {{record[0].Student.UserName}}
+                    </td>
+
+                    <ng-container *ngFor="let mark of record">
+                      <td class="mark-cell">
+                        <input class="mark-layout form-control"
+                               [ngModel]="mark.Mark | emptyMark" (ngModelChange)="mark.Mark = $event">
+                      </td>
+                    </ng-container>
+                  </tr>
+                </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="button" class="btn btn-primary pull-right" (click)="addNewMark()" value="Add Mark">
+        <input type="button" class="btn btn-success pull-right" (click)="save()" value="Save">
+      </div>
+
+    </div>
+    <div class="offset-1"></div>
+  </div>
+</div>
