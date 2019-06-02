@@ -10,11 +10,11 @@ export class SubjectService {
 
   constructor(private http: HttpClient) { }
 
-  getAllGroup() {
+  getAllSubject() {
     return this.http.get<Subject[]>(`${GET_ALL_SUBJECT}`);
   }
 
-  getAllGroupByTeacher() {
+  getAllSubjectByTeacher() {
     return this.http.get<Subject[]>(`${GET_ALL_SUBJECT_BY_TEACHER}`);
   }
 

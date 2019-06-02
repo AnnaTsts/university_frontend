@@ -27,7 +27,7 @@ import {EditProfileComponent} from './user-profile/edit-profile/edit-profile.com
 import {AgmCoreModule} from '@agm/core';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatCheckboxModule,
   MatFormFieldModule, MatInputModule,
   MatPaginatorModule,
@@ -49,9 +49,14 @@ import {RegistrationConfirmComponent} from './auth/registration/registration-con
 import {RegistrationSuccessfulComponent} from './auth/registration/registration-successful/registration-successful.component';
 import {AuthService} from './service/auth.service';
 import {JwtService} from './service/jwt.service';
+import { SelectSubjectComponent } from './select-subject/select-subject.component';
+import { SelectGroupComponent } from './select-group/select-group.component';
+import { CreateTeacherSubjectComponent } from './create-teacher-subject/create-teacher-subject.component';
+
 
 @NgModule({
   declarations: [
+    UserSummaryComponent,
     LoginComponent ,
     RegistrationComponent ,
     RegistrationConfirmComponent ,
@@ -60,7 +65,6 @@ import {JwtService} from './service/jwt.service';
     AppComponent,
     IndexComponent,
     UserComponent,
-    UserSummaryComponent,
     DataTableComponent,
     FormatCellPipe,
     ToTitlePipe,
@@ -71,6 +75,9 @@ import {JwtService} from './service/jwt.service';
     StudentTableComponent,
     TeachersTableComponent,
     EmptyMarkFieldPipePipe,
+    SelectSubjectComponent,
+    SelectGroupComponent,
+    CreateTeacherSubjectComponent,
 
   ],
   imports: [
@@ -95,7 +102,8 @@ import {JwtService} from './service/jwt.service';
     NgSelectModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
 
 
   ],

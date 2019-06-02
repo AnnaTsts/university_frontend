@@ -4,11 +4,11 @@ import {
   CHANGE_PASSWORD_SUMMARY,
   DELETE_USER_BY_ID,
   EDIT_SUMMARY,
-  GET_ALL_USERS,
+  GET_ALL_USERS, GET_CURR_USER_SUMM,
   GET_CURRENT_USER,
   GET_USER_BY_ID
 } from '@environments/environment';
-import {User} from '@models/user';
+import {User, User2, User3} from '@models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +32,7 @@ export class UsersService implements OnInit {
   }
 
   getUserSummary() {
-    return this.http.get<User>(`${GET_CURRENT_USER}`);
+    return this.http.get<User3>(`${GET_CURR_USER_SUMM}`);
   }
 
   getUserSummaryById(id: number) {
