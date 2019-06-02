@@ -61,19 +61,11 @@ export class EditProfileComponent implements OnInit {
     if (!this.editUserForm.controls.username.value.trim()) {
       this.editUserForm.controls.username.setValue(this.user.username);
     }
-    if (!this.editUserForm.controls.firstName.value.trim()) {
-      this.editUserForm.controls.firstName.setValue(this.user.details.firstName);
-    }
-    if (!this.editUserForm.controls.lastName.value.trim()) {
-      this.editUserForm.controls.lastName.setValue(this.user.details.lastName);
-    }
     if (!this.editUserForm.controls.email.value.trim()) {
       this.editUserForm.controls.email.setValue(this.user.email);
     }
 
     this.newUser.username = this.editUserForm.controls.username.value.trim();
-    this.newUser.details.firstName = this.editUserForm.controls.firstName.value.trim();
-    this.newUser.details.lastName = this.editUserForm.controls.lastName.value.trim();
     this.newUser.email = this.editUserForm.controls.email.value.trim();
 
     if (this.editUserForm.invalid) {

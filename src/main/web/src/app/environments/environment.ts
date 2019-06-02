@@ -1,19 +1,20 @@
 export const environment = {
   production: false,
-  ws: 'http://localhost:8080/socket'
+  ws: 'http://localhost:51862/socket'
   // ws: '/socket'
 };
 
 export const title = 'TripGod';
 
-export const BASE_URL = 'http://localhost:8080/';
+export const BASE_URL = 'http://localhost:51862/';
 // export const BASE_URL = "/";
 
-export const LOGIN_URL = BASE_URL + 'api/auth/signin';
-export const REGISTRATION_URL = BASE_URL + 'api/auth/signup';
+
+export const LOGIN_URL = BASE_URL + 'signin';
+export const REGISTRATION_URL = BASE_URL + 'api/Account/Register';
 export const REGISTRATION_SPECIAL_USER_URL = BASE_URL + 'api/account/users';
 export const PASSWORD_RECOVERY_URL = BASE_URL + 'api/auth/recovery';
-export const REGISTRATION_CONFIRM_URL = BASE_URL + 'api/auth/signup/';
+export const REGISTRATION_CONFIRM_URL = BASE_URL + 'api/auth/sign-up/';
 
 export const GET_ALL_USERS = BASE_URL + 'api/account/users';
 export const GET_CURRENT_USER = BASE_URL + 'api/account/summary';

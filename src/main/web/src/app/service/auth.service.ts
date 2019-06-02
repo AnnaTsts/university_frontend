@@ -1,80 +1,148 @@
-import { Injectable, ErrorHandler } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Observable, of, throwError, BehaviorSubject, Observer } from 'rxjs';
-import { delay, catchError, tap, map } from 'rxjs/operators';
-import { ErrorHandlingService } from './error-handling.service';
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { User } from "@models/user";
+import { BehaviorSubject } from "rxjs";
+import { map } from "rxjs/operators";
+import {
+  LOGIN_URL,
+  PASSWORD_RECOVERY_URL,
+  REGISTRATION_SPECIAL_USER_URL,
+  REGISTRATION_URL
+} from "@environments/environment";
+import * as jwt_decode from "jwt-decode";
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { JwtService } from './jwt.service';
-import {User} from "@models/user";
-
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthService {
+ public isSignedIn: boolean;
+  username: BehaviorSubject<string> = new BehaviorSubject(this.currentUsername);
 
-  private currentUser$ = new BehaviorSubject<User>(null);
-
-  constructor(private httpClient: HttpClient,
-    private jwtService: JwtService,
-    private errorHandlingService: ErrorHandlingService) {
+  constructor(private http: HttpClient) {
+    this.isSignedIn = (this.token != null);
+    this.username.next(this.currentUsername);
   }
 
-  public isSignedIn(): Observable<boolean> {
-    return this.currentUser$.pipe(
-      map(currentUser => !!currentUser)
-    );
+  login(loginPayload) {
+    console.log(loginPayload)
+
+    var formatedPayload = "userName=" + encodeURIComponent(loginPayload.username) +
+      "&password=" + encodeURIComponent(loginPayload.password) +
+      "&grant_type=password";
+
+    console.log(formatedPayload)
+
+    return this.http.post<any>(`${LOGIN_URL}`, formatedPayload, {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }).pipe(
+      map(data => {
+        if (data) {
+          console.log(data);
+          localStorage.setItem('current_user', JSON.stringify(data.access_token));
+          localStorage.setItem('username', JSON.stringify(data.username));
+          localStorage.setItem('email', JSON.stringify(data.email));
+          this.setTokenExpirationDate(+JSON.stringify(data.expires_in));
+          localStorage.setItem('id', JSON.stringify(data.id));
+
+          console.log('----');
+          console.log(localStorage.getItem('current_user'));
+          console.log(localStorage.getItem('username'));
+          console.log(localStorage.getItem('email'));
+          console.log(localStorage.getItem('expiration_date'));
+          console.log(localStorage.getItem('id'));
+          console.log('----');
+
+          this.isSignedIn = true;
+          this.username.next(this.currentUsername);
+        }
+        return data;
+      }));
+  };
+
+  logout() {
+    console.log('WTF')
+    // remove user from local storage to log user out
+    localStorage.removeItem('current_user');
+    localStorage.removeItem('username');
+    localStorage.removeItem('email');
+    localStorage.removeItem('expiration_date');
+    localStorage.removeItem('id');
+    this.isSignedIn = false;
   }
 
-  // login : new_user2
-  // pass: 666
-  public signIn(loginModel: User): Observable<User> {
-    const PATH = 'http://localhost:51862/Token';
-
-    var data = "username="+loginModel.email+"&password="+loginModel.password+"&grant_type=password";
-    var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-urlencoded','No-Auth': 'True'});
-
-
-    return this.httpClient.post<any>(PATH, data, {headers : reqHeader});
+  registration(registrationPayload) {
+    return this.http.post<any>(`${REGISTRATION_URL}`, registrationPayload).pipe(
+      map(data => {
+          return data;
+        }
+      ));
   }
 
-  //   return this.httpClient.post<any>(PATH, data, {headers : reqHeader}).pipe(
-  //     tap(({user, token}) => {
-  //           this.jwtService.persistToken(token);
-  //           this.currentUser$.next(user as User);
-  //         }),
-  //         catchError(this.errorHandlingService.handleError)    
-  //   )
+  registrationSpecUser(registrationPayload) {
+    return this.http.post<any>(`${REGISTRATION_SPECIAL_USER_URL}`, registrationPayload).pipe(
+      map(data => {
+          return data;
+        }
+      ));
+  }
+
+  recoveryPassword(recoveryPasswordPayload) {
+    return this.http.get<any>(`${PASSWORD_RECOVERY_URL}?email=` + recoveryPasswordPayload).pipe(
+      map(data => {
+          return data;
+        }
+      ));
+  }
+
+  public get currentId() {
+    if (this.token) {
+      console.log(localStorage.getItem('id'));
+      return localStorage.getItem('id');
+    } else return null
+  }
+
+  public get currentUsername() {
+    if (this.token) {
+      console.log(localStorage.getItem('username'));
+      return localStorage.getItem('username');
+    } else return null
+  }
+
+  public get currentEmail() {
+    if (this.token) {
+      console.log(localStorage.getItem('email'));
+      return localStorage.getItem('email');
+    } else return null
+  }
+  //
+  // public get isSignedIn() : boolean {
+  //   return this.isSignedIn;
   // }
 
-  public singUp(loginModel: User) {
-    const PATH = 'http://localhost:51862/api/Account/Register';
-    var reqHeader = new HttpHeaders({'No-Auth': 'True'});
-    return this.httpClient.post(PATH,loginModel, {headers : reqHeader});
+  public get token() {
+    // localStorage.removeItem('currentUser');
+    console.log(localStorage.getItem('current_user'));
+    return localStorage.getItem('current_user');
   }
 
-  public GetAuthBooks(): Observable<any>{
-    // var reqHeader = new HttpHeaders({'Authorization': usToken });
-    // var reqHeader = new HttpHeaders('Authorization:' + usToken);
-    const PATH = 'http://localhost:51862/api/Testing';
-    return this.httpClient.get(PATH);
+  private setTokenExpirationDate(expires_in: number) {
+    console.log(Date.now() / 60);
+    var expiration_date = expires_in + Date.now() / 60;
+    console.log(expiration_date)
+    localStorage.setItem('expiration_date', expiration_date.toString());
+    console.log(localStorage.getItem('expiration_date'))
   }
 
-  public GetBooks(): Observable<any>{
-    // var reqHeader = new HttpHeaders({'Authorization': usToken });
-    // var reqHeader = new HttpHeaders('Authorization:' + usToken);
-    const PATH = 'http://localhost:51862/api/Values';
-    return this.httpClient.get(PATH);
+  getTokenExpirationDate(token: string): Date {
+    if (this.token) {
+      var expiration_date = +localStorage.getItem('expiration_date') ;
+      return new Date(expiration_date * 60)
+    } else return null
   }
 
-
-  public getCurrentUser(): Observable<User> {
-    return this.currentUser$.asObservable();
+  isTokenExpired(): boolean {
+    const date = this.getTokenExpirationDate(this.token);
+    if (date === undefined || date == null) return true;
+    return (date.valueOf() <= new Date().valueOf());
   }
-
-  // public validateLogin(login: string): Observable<boolean> {
-  //   const valid = !this.mockedUsers.some(userItem => userItem[0].login == login);
-  //   return of(valid).pipe(
-  //     delay(1500),
-  //     catchError(this.errorHandlingService.handleError)
-  //   );
-  // }
 }

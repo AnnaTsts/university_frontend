@@ -33,13 +33,19 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
 
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import {LoginComponent} from './auth/login/login.component';
+import {RegistrationComponent} from './auth/registration/registration.component';
+import {RegistrationConfirmComponent} from './auth/registration/registration-confirm/registration-confirm.component';
+import {RegistrationSuccessfulComponent} from './auth/registration/registration-successful/registration-successful.component';
+import {AuthService} from './service/auth.service';
+import {JwtService} from './service/jwt.service';
 
 @NgModule({
   declarations: [
-    SignInComponent,
-    SignUpComponent,
+    LoginComponent ,
+    RegistrationComponent ,
+    RegistrationConfirmComponent ,
+    RegistrationSuccessfulComponent,
     HeaderComponent,
     AppComponent,
     IndexComponent,
@@ -83,7 +89,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     DatePipe,
     FormatCellPipe,
     AuthorityPipe,
-
+    AuthService,
+    JwtService,
+    Window
 
   ],
   bootstrap: [AppComponent],

@@ -1,14 +1,12 @@
 import {UserDetails} from './user.details';
 
 export interface User {
-  id?: number;
-  authorityId?: number;
+  id: number;
+  authorityId: number;
   email: string;
   username: string;
   password: string;
-  ConfirmPassword?: string ;
-  authority?: string;
-  details?: UserDetails;
+  authority: string;
   token?: string;
 
   // firstName?: string;
@@ -17,3 +15,5 @@ export interface User {
   // registrationDate?: string;
   // imgSrc?: string
 }
+
+
