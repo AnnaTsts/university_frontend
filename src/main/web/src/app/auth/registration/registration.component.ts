@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "@services/auth.service";
+import {AuthService} from '../../service/auth.service';
 import {Router} from "@angular/router";
 import {MustMatch} from "@helpers/must-mutch.validator";
 
