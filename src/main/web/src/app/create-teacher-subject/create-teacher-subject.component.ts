@@ -8,8 +8,8 @@ import {Subject} from '@models/subject';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TeacherSubject, TeacherSubject2} from '@models/teacher-subject';
 import {User2} from '@models/user';
-import {TeacherSubjectService} from "@services/teacher-subject.service";
-import {AuthService} from "../service/auth.service";
+import {TeacherSubjectService} from '@services/teacher-subject.service';
+import {AuthService} from '../service/auth.service';
 
 @Component({
   selector: 'app-create-teacher-subject',
@@ -71,10 +71,11 @@ public selectedSubject: Subject;
       Semester: number;
     }();
 
+    // this.teacherSubject.Group = this.selectedGroup;
     this.teacherSubject.Group = this.selectedGroup;
     this.teacherSubject.GroupId = this.selectedGroup.Id;
-    //this.teacherSubject.Semester = this.selectedSemester;
-    //this.teacherSubject.Subject = this.selectedSubject;
+    // this.teacherSubject.Semester = this.selectedSemester;
+    // this.teacherSubject.Subject = this.selectedSubject;
     this.teacherSubject.SubjectId = this.selectedSubject.Id;
     console.log( this.teacherSubject);
     this.teacherS.postTeacherSubject(this.teacherSubject).subscribe( () => {
@@ -83,7 +84,7 @@ public selectedSubject: Subject;
   });
   }
 
-  get(){
+  get() {
     this.router.navigate(['getMarks/'/*+ this.auth.currentId()*/]);
   }
 }
