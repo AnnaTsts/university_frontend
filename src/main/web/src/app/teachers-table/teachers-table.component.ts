@@ -1,5 +1,6 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {StudentMark} from '@models/student-mark';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-test',
@@ -7,8 +8,9 @@ import {StudentMark} from '@models/student-mark';
   styleUrls: ['./teachers-table.component.scss']
 })
 export class TeachersTableComponent implements OnInit {
+  @Input() groupId: number;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
   }
 
   @ViewChild('table') public table: ElementRef;
@@ -1690,7 +1692,12 @@ export class TeachersTableComponent implements OnInit {
   ];
 
   ngOnInit() {
+    const currentGroupId = this.route.snapshot.paramMap.get('id');
+    console.log(currentGroupId);
+
+
     this.dataToWork = JSON.parse(JSON.stringify(this.receivedData));
+
   }
 
   addNewMark() {
