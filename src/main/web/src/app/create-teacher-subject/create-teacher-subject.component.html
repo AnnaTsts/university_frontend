@@ -16,7 +16,6 @@
             <ng-select [items]=groups
                        bindLabel="Name"
                        placeholder="Select group"
-                       class="select-layout"
                        [(ngModel)]="selectedGroup">
             </ng-select>
           </div>
@@ -30,7 +29,6 @@
             <ng-select [items]=subjects
                        bindLabel="Name"
                        placeholder="Select subject"
-                       class="select-layout"
                        [(ngModel)]="selectedSubject">
             </ng-select>
           </div>
@@ -60,18 +58,14 @@
         <div class="row">
           <div class="offset-1"></div>
           <div class="col-md-10">
-            <div class="row">
-              <button class="btn styledButton right-aligned" color="primary" mdbBtn mdbWavesEffect (click)=add()>
-                Add
-                <i *ngIf="loading1" class="fa fa-spinner fa-spin"></i>
-              </button>
-            </div>
-            <div class="row">
-              <button class="btn styledButton right-aligned" color="primary" mdbBtn mdbWavesEffect (click)=get()>
-                Get Group Marks
-                <i *ngIf="loading2" class="fa fa-spinner fa-spin"></i>
-              </button>
-            </div>
+            <button class="btn styledButton wide-btn" color="primary" mdbBtn mdbWavesEffect (click)=add()>
+              Add
+              <i *ngIf="loading1" class="fa fa-spinner fa-spin"></i>
+            </button>
+            <button class="btn styledButton wide-btn" color="primary" mdbBtn mdbWavesEffect (click)=get()>
+              Get Group Marks
+              <i *ngIf="loading2" class="fa fa-spinner fa-spin"></i>
+            </button>
           </div>
           <div class="offset-1"></div>
         </div>

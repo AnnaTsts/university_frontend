@@ -1,37 +1,58 @@
-<div class="container container-layout">
-  <div class="col-md-8">
+<div class="container-fluid container-layout">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
 
-    <mat-card class="filter">
-      <div class="row">
-        <mat-card-header>
-          <mat-card-title>Select group for see marks</mat-card-title>
-        </mat-card-header>
-      </div>
+      <mat-card class="filter">
+        <div class="row">
+          <mat-card-header class="center-layout">
+            <mat-card-title>Select group for see marks</mat-card-title>
+          </mat-card-header>
+        </div>
+
+        <div class="row">
+          <div class="offset-1"></div>
+          <div class="col-md-10">
+            <ng-select [items]=groups
+                       bindLabel="Name"
+                       placeholder="Select group"
+                       [(ngModel)]="selectedGroup">
+            </ng-select>
+          </div>
+          <div class="offset-1"></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="offset-1"></div>
+
+          <div class="col-md-10">
+            <button class="btn styledButton wide-btn" color="primary" mdbBtn mdbWavesEffect (click)=add()>
+              Add new Group
+              <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+
+          <div class="offset-1"></div>
+        </div>
+
+        <div class="row">
+          <div class="offset-1"></div>
+
+          <div class="col-md-10">
+            <button class="btn styledButton wide-btn" color="primary" mdbBtn mdbWavesEffect (click)=get()>
+              Get Goup Marks
+              <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+
+          <div class="offset-1"></div>
+        </div>
 
 
-      <div class="col-md-5">
-
-        <ng-select [items]=groups
-                   bindLabel="Name"
-                   placeholder="Select group"
-                   [(ngModel)]="selectedGroup">
-        </ng-select>
-      </div>
-
-      <div>
-        <button class="btn btn-wide styledButton" color="primary" mdbBtn mdbWavesEffect (click)=add()>
-          Add new Group
-          <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
-        </button>
-      </div>
-
-      <div>
-        <button class="btn btn-wide styledButton" color="primary" mdbBtn mdbWavesEffect (click)=get()>
-          Get Goup Marks
-          <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
-        </button>
-      </div>
-
-    </mat-card>
+      </mat-card>
+    </div>
+    <div class="offset-3"></div>
   </div>
 </div>
