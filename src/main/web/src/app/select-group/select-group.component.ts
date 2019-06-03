@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 
 import {GroupService} from '@services/group.service';
 import {Group} from '@models/group';
-import {MarksService} from "@services/marks.service";
+import {MarksService} from '@services/marks.service';
 
 @Component({
   selector: 'app-select-group',
@@ -15,12 +15,13 @@ export class SelectGroupComponent implements OnInit {
 
   public selectedGroup: Group;
   public groups: Group[];
-  loading =  false;
+  loading = false;
 
   constructor(private router: Router,
               private http: HttpClient,
               private groupService: GroupService,
-              private stusentsMark: MarksService) { }
+              private stusentsMark: MarksService) {
+  }
 
   ngOnInit() {
     this.groupService.getAllGroup().subscribe(data => {
@@ -31,12 +32,11 @@ export class SelectGroupComponent implements OnInit {
     });
   }
 
-  get()
-  {
+  get() {
     this.router.navigate(['GetMarksByGroup/' + this.selectedGroup.Id]);
   }
 
-  add(){
+  add() {
     this.router.navigate(['createTeacherSubject/']);
   }
 
