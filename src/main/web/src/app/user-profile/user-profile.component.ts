@@ -25,7 +25,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
     this.usersService.getUserSummaryById(+this.aRoute.snapshot.paramMap.get('id')).subscribe(data => {
       this.user = data;
-      this.editable = (this.user.authority === 'ROLE_PROVIDER' || this.user.authority === 'ROLE_APPROVER') && this.authService.getDecodedToken().authority === 'ROLE_ADMIN';
+      this.editable = false;
     }, err => {
       alert(err);
     });
