@@ -38,11 +38,16 @@ export class AuthService {
       map(data => {
         if (data) {
           console.log(data);
-          localStorage.setItem('current_user', JSON.stringify(data.access_token));
-          localStorage.setItem('username', JSON.stringify(data.username));
-          localStorage.setItem('email', JSON.stringify(data.email));
-          this.setTokenExpirationDate(+JSON.stringify(data.expires_in));
-          localStorage.setItem('id', JSON.stringify(data.id));
+          localStorage.setItem('current_user', data.access_token);
+          localStorage.setItem('username', data.username);
+          localStorage.setItem('email', data.email);
+          this.setTokenExpirationDate(+data.expires_in);
+          localStorage.setItem('id', data.id);
+          // localStorage.setItem('current_user', JSON.stringify(data.access_token));
+          // localStorage.setItem('username', JSON.stringify(data.username));
+          // localStorage.setItem('email', JSON.stringify(data.email));
+          // this.setTokenExpirationDate(+JSON.stringify(data.expires_in));
+          // localStorage.setItem('id', JSON.stringify(data.id));
 
           console.log('----');
           console.log(localStorage.getItem('current_user'));
@@ -60,7 +65,7 @@ export class AuthService {
   };
 
   logout() {
-    console.log('WTF')
+    console.log('WTF');
     // remove user from local storage to log user out
     localStorage.removeItem('current_user');
     localStorage.removeItem('username');

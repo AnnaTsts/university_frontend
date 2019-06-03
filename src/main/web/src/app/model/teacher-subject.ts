@@ -13,9 +13,21 @@ export interface TeacherSubject {
 
   Semester: number;
 
-  Teacher: User2;
+  Teacher?: User2;
 
-  Group: Group;
+  Group?: Group;
+
+  Subject: Subject;
+}
+
+export interface TeacherSubject2 {
+  Id: number;
+
+  TeacherId: string;
+
+  SubjectId: number;
+
+  GroupId: number;
 
   Subject: Subject;
 }

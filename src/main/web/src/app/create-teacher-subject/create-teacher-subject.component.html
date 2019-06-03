@@ -40,10 +40,16 @@
     <div>
       <button class="btn btn-wide styledButton" color="primary" mdbBtn mdbWavesEffect (click)=add()>
         Add
-        <i *ngIf="loading" class="fa fa-spinner fa-spin"></i>
+        <i *ngIf="loading1" class="fa fa-spinner fa-spin"></i>
       </button>
     </div>
 
+    <div>
+      <button class="btn btn-wide styledButton" color="primary" mdbBtn mdbWavesEffect (click)=get()>
+        Get Goup Marks
+        <i *ngIf="loading2" class="fa fa-spinner fa-spin"></i>
+      </button>
+    </div>
 
   </mat-card>
 </div>

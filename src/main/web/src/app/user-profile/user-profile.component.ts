@@ -3,7 +3,7 @@ import {UsersService} from '../shared/users.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {User} from '@models/user';
-import {AuthService} from '../shared/auth.service';
+import {AuthService} from '../service/auth.service';
 
 @Component({
   selector: 'app-user-profile',

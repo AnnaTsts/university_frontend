@@ -6,8 +6,10 @@ import {GroupService} from '@services/group.service';
 import {Group} from '@models/group';
 import {Subject} from '@models/subject';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {TeacherSubject} from '@models/teacher-subject';
+import {TeacherSubject, TeacherSubject2} from '@models/teacher-subject';
 import {User2} from '@models/user';
+import {TeacherSubjectService} from "@services/teacher-subject.service";
+import {AuthService} from "../service/auth.service";
 
 @Component({
   selector: 'app-create-teacher-subject',
@@ -24,14 +26,16 @@ public selectedSubject: Subject;
   teacherSubject: TeacherSubject;
   selectedSemester: number;
   filterForm: FormGroup;
-  loading = false;
+  loading1 = false;
+  loading2 = false;
   submitted = false;
 
   constructor(private router: Router,
               private http: HttpClient,
               private subjectService: SubjectService,
               private groupService: GroupService,
-              private formBuilder: FormBuilder) {
+              private teacherS: TeacherSubjectService,
+              private auth: AuthService) {
   }
 
   ngOnInit() {
@@ -54,23 +58,32 @@ public selectedSubject: Subject;
 
 
   add() {
-    this.teacherSubject = new class implements TeacherSubject {
-      Group: Group;
+    this.loading1 = true;
+    this.teacherSubject = new class implements TeacherSubject2 {
+
       GroupId: number;
       Id: number;
-      Semester: number;
+
       Subject: Subject;
       SubjectId: number;
-      Teacher: User2;
-      TeacherId: string;
-    };
 
-    this.teacherSubject.Group = this.selectedGroup;
+      TeacherId: string;
+      Semester: number;
+    }();
+
+    //this.teacherSubject.Group = this.selectedGroup;
     this.teacherSubject.GroupId = this.selectedGroup.Id;
-    this.teacherSubject.Semester = this.selectedSemester;
-    this.teacherSubject.Subject = this.selectedSubject;
+    //this.teacherSubject.Semester = this.selectedSemester;
+    //this.teacherSubject.Subject = this.selectedSubject;
     this.teacherSubject.SubjectId = this.selectedSubject.Id;
     console.log( this.teacherSubject);
+    this.teacherS.postTeacherSubject(this.teacherSubject).subscribe( () => {
 
+    this.router.navigate(['']);
+  });
+  }
+
+  get(){
+    this.router.navigate(['getMarks/'/*+ this.auth.currentId()*/]);
   }
 }

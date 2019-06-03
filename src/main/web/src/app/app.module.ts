@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {IndexComponent} from './system/index/index.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {routing} from './app.routing';
 import {UserComponent} from './user/user.component';
 
@@ -39,9 +39,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {AuthorityPipe} from './system/data-table/authority.pipe';
-import { StudentTableComponent } from './student-table/student-table.component';
-import { TeachersTableComponent } from './teachers-table/teachers-table.component';
-import { EmptyMarkFieldPipePipe } from './helpers/empty-mark-field-pipe.pipe';
+import {StudentTableComponent} from './student-table/student-table.component';
+import {TeachersTableComponent} from './teachers-table/teachers-table.component';
+import {EmptyMarkFieldPipePipe} from './helpers/empty-mark-field-pipe.pipe';
 
 import {LoginComponent} from './auth/login/login.component';
 import {RegistrationComponent} from './auth/registration/registration.component';
@@ -49,17 +49,19 @@ import {RegistrationConfirmComponent} from './auth/registration/registration-con
 import {RegistrationSuccessfulComponent} from './auth/registration/registration-successful/registration-successful.component';
 import {AuthService} from './service/auth.service';
 import {JwtService} from './service/jwt.service';
-import { SelectSubjectComponent } from './select-subject/select-subject.component';
-import { SelectGroupComponent } from './select-group/select-group.component';
-import { CreateTeacherSubjectComponent } from './create-teacher-subject/create-teacher-subject.component';
+import {SelectSubjectComponent} from './select-subject/select-subject.component';
+import {SelectGroupComponent} from './select-group/select-group.component';
+import {CreateTeacherSubjectComponent} from './create-teacher-subject/create-teacher-subject.component';
+import {HttpErrorInterceptor} from "@helpers/HttpError.interceptor";
+import {JwtInterceptor} from "@helpers/jwt.interceptor";
 
 
 @NgModule({
   declarations: [
     UserSummaryComponent,
-    LoginComponent ,
-    RegistrationComponent ,
-    RegistrationConfirmComponent ,
+    LoginComponent,
+    RegistrationComponent,
+    RegistrationConfirmComponent,
     RegistrationSuccessfulComponent,
     HeaderComponent,
     AppComponent,
@@ -115,7 +117,9 @@ import { CreateTeacherSubjectComponent } from './create-teacher-subject/create-t
     AuthorityPipe,
     AuthService,
     JwtService,
-    Window
+    Window,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true}
 
   ],
   bootstrap: [AppComponent],

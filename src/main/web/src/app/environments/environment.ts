@@ -35,6 +35,8 @@ export const GET_ALL_GROUP = BASE_URL + 'api/Group';
 export const GET_ALL_SUBJECT = BASE_URL + 'api/Subject/All';
 export const GET_ALL_SUBJECT_BY_TEACHER = BASE_URL + 'api/TeacherSubject/teacher';
 
+export const POST_TEACHER_SUBJECT = BASE_URL + 'api/TeacherSubject/register';
+
 
 
 export const GET_ALL_GROUP_BY_TEACHER = BASE_URL + 'api/Group/Teacher';

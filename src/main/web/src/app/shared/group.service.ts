@@ -15,8 +15,12 @@ export class GroupService {
   }
 
 
-  getAllGroupByTeacher() {
+   getAllGroupByTeacher() {
     return this.http.get<Group[]>(`${GET_ALL_GROUP_BY_TEACHER}` );
+  }
+
+  getAllGroupByTeacherId(id:string) {
+    return this.http.get<Group[]>(`${GET_ALL_GROUP_BY_TEACHER}`+ id );
   }
 
 }
