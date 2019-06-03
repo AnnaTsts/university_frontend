@@ -66,12 +66,12 @@ public selectedSubject: Subject;
 
       Subject: Subject;
       SubjectId: number;
-
+      Group: Group;
       TeacherId: string;
       Semester: number;
     }();
 
-    //this.teacherSubject.Group = this.selectedGroup;
+    this.teacherSubject.Group = this.selectedGroup;
     this.teacherSubject.GroupId = this.selectedGroup.Id;
     //this.teacherSubject.Semester = this.selectedSemester;
     //this.teacherSubject.Subject = this.selectedSubject;

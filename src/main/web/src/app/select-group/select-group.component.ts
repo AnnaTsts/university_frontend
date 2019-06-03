@@ -23,7 +23,7 @@ export class SelectGroupComponent implements OnInit {
               private stusentsMark: MarksService) { }
 
   ngOnInit() {
-    this.groupService.getAllGroupByTeacher().subscribe(data => {
+    this.groupService.getAllGroup().subscribe(data => {
       this.groups = data;
       console.log(this.groups);
     }, err => {
